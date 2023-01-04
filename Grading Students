@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+#include<iostream>
+using namespace std;
+
+string ltrim(const string &);
+string rtrim(const string &);
+
+/*
+ * Complete the 'gradingStudents' function below.
+ *
+ * The function is expected to return an INTEGER_ARRAY.
+ * The function accepts INTEGER_ARRAY grades as parameter.
+ */
+
+void gradingStudents(int* grades,int n) {
+
+
+for(int i=0 ;i<n;i++)
+for(int j=40;j<=100;j+=5)
+if(j>grades[i]&&grades[i]>=38)
+    if(j-grades[i]<3)
+   { grades[i]=j;break;
+}
+}
+
+int main()
+{vector<int> g;
+int x,temp;
+cin>>x;
+int a[x];
+for(int i=0 ;i<x;i++)
+{cin>>a[i];g.push_back(temp);}
+gradingStudents(a,x);
+for(int i=0 ;i<x;i++)
+cout<<a[i]<<endl;
+}
+
