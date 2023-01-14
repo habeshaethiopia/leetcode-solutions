@@ -1,0 +1,57 @@
+
+import java.util.*;
+
+class Result {
+
+    /*
+     * Complete the 'insertionSort1' function below.
+     *
+     * The function accepts following parameters:
+     *  1. INTEGER n
+     *  2. INTEGER_ARRAY arr
+     */
+public static void  insertionSort(int[] array,int n) {
+    for (int i = 1; i < n; i++) {
+        int key = array[i];
+        int j = i - 1;
+        while (j >= 0 && array[j] > key) {
+            array[j + 1] = array[j];
+            j--;
+            for(int x=0;x<n;x++)
+            System.out.print(array[x] +" ");
+             
+        }System.out.println();
+        array[j + 1] = key;
+        for(int x=0;x<n;x++)
+            System.out.print(array[x] +" ");
+    }
+}}
+public class result{
+    public static void  insertionSort(int[] array,int n) {
+       int shift=0;
+    for (int i = 1; i < n; i++) {
+        int key = array[i];
+        int j = i - 1;
+        while (j >= 0 && array[j] > key) {
+            array[j + 1] = array[j];
+            j--;
+            for(int x=0;x<n;x++)
+            System.out.print(array[x] +" ");
+             System.out.println();
+             shift=1;
+        }
+        array[j + 1] = key;
+       
+        for(int x=0;x<n&&shift==1;x++)
+            System.out.print(array[x] +" ");
+    }}
+    public static void main(String[] args)  {
+         int m;
+    Scanner in =new Scanner(System.in);
+    m=in.nextInt();
+int []array=new int[m];
+for(int x=0;x<m;x++)
+  array[x]=in.nextInt();
+    insertionSort(array,m);
+    }
+}
