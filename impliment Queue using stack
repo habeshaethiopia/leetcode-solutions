@@ -1,0 +1,26 @@
+class MyQueue {
+int []val=new int[100];
+int top=-1;
+    public MyQueue() {
+        
+    }
+    
+    public void push(int x) {
+        top++;
+        val[top]=x; 
+    }
+    
+    public int pop() {
+       
+       top--;
+       return val[top];
+    }
+    
+    public int peek() {
+       return val[top-1]; 
+    }
+    
+    public boolean empty() {
+      return top==-1;  
+    }
+}
