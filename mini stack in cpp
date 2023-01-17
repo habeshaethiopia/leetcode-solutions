@@ -1,0 +1,33 @@
+class MinStack {
+public:
+int n,Top=-1;
+vector<int> stack;
+    MinStack() {
+     Top=-1;   
+    }
+    
+    void push(int val) {
+      stack.push_back(val);
+      Top++;  
+    }
+    
+    void pop() {
+    Top--;
+    stack.pop_back();
+
+    }
+    
+    int top() {
+      return stack[Top]; 
+    }
+    
+    int getMin() {
+        int min=stack[Top];
+     for (int i=0;i<Top;i++) 
+     {
+      if (min>stack[i])
+      min=stack[i];
+     } 
+     return min; 
+    }
+};
